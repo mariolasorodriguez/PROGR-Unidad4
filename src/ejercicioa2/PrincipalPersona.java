@@ -15,33 +15,42 @@ public class PrincipalPersona {
 		// Leemos los datos de la persona 1
 		System.out.println("Introduce los datos de la PERSONA 1: ");
 		
-		System.out.println("Nombre: ");
+		System.out.print("Nombre: ");
 		p1.nombre = reader.next();
 		
-		System.out.println("Apellidos: ");
+		System.out.print("Apellidos: ");
 		p1.apellidos = reader.next();
 		
-		System.out.println("DNI: ");
+		System.out.print("DNI: ");
 		p1.dni = reader.nextInt();
 		
-		System.out.println("Edad: ");
+		System.out.print("Edad: ");
 		p1.edad = reader.nextInt();
 		
 		// Leemos los datos de la persona 2
 		System.out.println("Introduce los datos de la PERSONA 2: ");
 		
-		System.out.println("Nombre: ");
+		System.out.print("Nombre: ");
 		p2.nombre = reader.next();
 		
-		System.out.println("Apellidos: ");
+		System.out.print("Apellidos: ");
 		p2.apellidos = reader.next();
 		
-		System.out.println("DNI: ");
+		System.out.print("DNI: ");
 		p2.dni = reader.nextInt();
 		
-		System.out.println("Edad: ");
+		System.out.print("Edad: ");
 		p2.edad = reader.nextInt();
 		
-		
+		// Llamamos a la funcion para ver las personas introducidas
+		System.out.println("Comprueba los datos introducidos: ");
+		imprimirPersonas(p1);
+		imprimirPersonas(p2);
+	}
+	
+	// Función para imprimir las personas
+	public static void imprimirPersonas(Persona p) {
+		String mayoria = p.esMayorDeEdad() ? "es mayor de edad" : "no es mayor de edad";
+		System.out.println(p.nombre + " " + p.apellidos + " con DNI " + p.dni + " " + mayoria);
 	}
 }
