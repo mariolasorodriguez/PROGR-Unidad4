@@ -42,6 +42,7 @@ public class PrincipalPunto {
 	/*
 	 * @param Función para imprimir por pantalla las coordenadas dependiendo del numero de objeto
 	 */
+	
 	public static void imprimirCoordenadas(int numero, Punto punto) {
 		System.out.println("PUNTO " + numero + ": Coordenada X: " + punto.x + " Coordenada Y: " + punto.y);
 	}
