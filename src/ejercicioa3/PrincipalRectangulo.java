@@ -18,6 +18,24 @@ public class PrincipalRectangulo {
 		r2.x2 = 2;
 		r2.y2 = 3;
 		
+		// Mostramos por pantalla las coordenadas
+		System.out.println("Rectangulo 1: ");
+		System.out.println("Vértice 1: " + "(" + r1.x1 + "," + r1.y1 + ")");
+		System.out.println("Vértice 2: " + "(" + r1.x2 + "," + r1.y2 + ")");
+		
+		
+		System.out.println("Rectangulo 2: ");
+		System.out.println("Vértice 1: " + "(" + r2.x1 + "," + r2.y1 + ")");
+		System.out.println("Vértice 2: " + "(" + r2.x2 + "," + r2.y2 + ")");
+		
 		
 	}
+	
+	public double calculoPerimetro(double perimetro) {
+		perimetro = 2 * 0;
+		
+		return perimetro;
+		
+	}
+
 }
