@@ -1,7 +1,7 @@
 package ejerciciob2;
 
 public class Persona {
-	int dni;
+	String dni;
 	String nombre;
 	String apellidos;
 	int edad;

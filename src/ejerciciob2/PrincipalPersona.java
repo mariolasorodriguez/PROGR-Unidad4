@@ -22,7 +22,7 @@ public class PrincipalPersona {
 		p1.apellidos = reader.next();
 		
 		System.out.print("DNI: ");
-		p1.dni = reader.nextInt();
+		p1.dni = reader.next();
 		
 		System.out.print("Edad: ");
 		p1.edad = reader.nextInt();
@@ -37,7 +37,7 @@ public class PrincipalPersona {
 		p2.apellidos = reader.next();
 		
 		System.out.print("DNI: ");
-		p2.dni = reader.nextInt();
+		p2.dni = reader.next();
 		
 		System.out.print("Edad: ");
 		p2.edad = reader.nextInt();
