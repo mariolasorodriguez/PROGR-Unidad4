@@ -6,6 +6,14 @@ public class Persona {
 	String apellidos;
 	int edad;
 	
+	public Persona(String dni, String nombre, String apellidos, int edad) {
+		this.dni = dni;
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.edad = edad;
+	}
+	
+	
 	// Verificamos si es mayor de edad
     public boolean esMayorDeEdad() {
         return this.edad >= 18;

@@ -46,6 +46,9 @@ public class PrincipalPersona {
 		System.out.println("Comprueba los datos introducidos: ");
 		imprimirPersonas(p1);
 		imprimirPersonas(p2);
+		
+		// Cerramos el scanner
+		reader.close();
 	}
 	
 	// Función para imprimir las personas
