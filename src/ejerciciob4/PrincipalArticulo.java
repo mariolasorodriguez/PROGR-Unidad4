@@ -4,22 +4,16 @@ public class PrincipalArticulo {
 	public static void main(String[] args) {
 		
 		// Creamos el objeto articulo
-		Articulo art = new Articulo();
+		Articulo articulo1 = new Articulo("Pijama", 10.0, 21, 50);
+		Articulo articulo2 = new Articulo("Zapatos", 25.0, 21, 30);
 		
-		// Definimos valores para el producto
-		art.nombre = "Camiseta Amate";
-		art.precio = 13;
-		art.cuantosQuedan = 10;
+		mostrar(articulo1);
+		mostrar(articulo2);
 		
-		// Mostramos el producto por pantalla
-		System.out.println(art.nombre + " | Precio: " + art.precio + " | IVA: 21% " + " | PVP: " + (art.precio + art.precio * art.cantIva));
-		
-		// Modificamos los precios
-		art.nombre = "Camiseta Amate";
-		art.precio = 18;
-		art.cuantosQuedan = 10;
-		
-		// Mostramos el producto por pantalla modificado
-		System.out.println(art.nombre + " | Precio: " + art.precio + " | IVA: 21% " + " | PVP: " + (art.precio + art.precio * art.cantIva));
+	}
+	
+	static void mostrar(Articulo articulo) {
+		System.out.println("------------ TICKET ARTICULO --------------");
+		System.out.println(articulo.nombre + " | PRECIO: " + articulo.precio + "€ | IVA: " + articulo.iva + "% | STOCK: " + articulo.cuantosQuedan + "ud(s)");
 	}
 }
