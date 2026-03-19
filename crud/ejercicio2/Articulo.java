@@ -31,11 +31,12 @@ public class Articulo {
 
     // Devuelve true si se pudo sacar, false si no hay suficiente
     public boolean salirMercancia(int cantidad) {
+    	boolean puedeSalir = false;
         if (this.stock >= cantidad) {
             this.stock -= cantidad;
-            return true;
+            puedeSalir = true;
         }
-        return false;
+        return puedeSalir;
     }
 
     public String toString() {

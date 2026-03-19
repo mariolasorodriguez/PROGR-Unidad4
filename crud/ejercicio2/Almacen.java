@@ -14,9 +14,9 @@ public class Almacen {
     }
 
     public Articulo buscarArticulo(String codigo) {
-        for (Articulo a : inventario) {
-            if (a.getCodigo().equalsIgnoreCase(codigo)) {
-                return a;
+    	for (Articulo articulo : inventario) {
+            if (articulo.getCodigo().equalsIgnoreCase(codigo)) {
+                return articulo;
             }
         }
         return null; 
@@ -27,11 +27,28 @@ public class Almacen {
     }
 
     public boolean baja(String codigo) {
-        Articulo a = buscarArticulo(codigo);
-        if (a != null) {
-            inventario.remove(a);
-            return true;
+        Articulo articulo = buscarArticulo(codigo);
+        boolean eliminado = false;
+        if (articulo != null) {
+            inventario.remove(articulo);
+            eliminado = true;
         }
-        return false;
+        return eliminado;
     }
+    
+    public boolean modificarArticulo(String codigo, 
+    								String nuevaDescripcion, 
+    								double nuevoPrecioCompra, 
+    								double nuevoPrecioVenta) {
+    	
+		Articulo articulo = buscarArticulo(codigo);
+		boolean modificado = false;
+		if (articulo != null) {
+			articulo.setDescripcion(nuevaDescripcion);
+			articulo.setPrecioCompra(nuevoPrecioCompra);
+			articulo.setPrecioVenta(nuevoPrecioVenta);
+			modificado = true;
+		}
+		return modificado;
+	}
 }
